@@ -1,43 +1,38 @@
 ﻿using BalDemo;
 using Meeting.Resources;
 using ModelDemo;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Meeting
 {
     public partial class frmConference : Form
     {
-        BalConference balconfrence;
-        Confrence _confrence = null;
-        public frmConference(Confrence confrence)
+        readonly BalConference balConference;
+
+        readonly Conference? _conference;
+
+        public frmConference()
         {
             InitializeComponent();
-            //balconfrence = new BalConfrence();
-            //confrence = balconfrence.Confrence(id);
-            if (confrence != null)
-            {
-                _confrence = confrence;
-            }
-            else
-            {
-                _confrence = new Confrence { Id = 5 };
-            }
 
+            balConference = new BalConference();
+
+            _conference = null;
         }
 
-        private void frmConfrence_Load(object sender, EventArgs e)
+        public frmConference(Conference conference)
         {
-            if (_confrence != null)
+            InitializeComponent();
+
+            balConference = new BalConference();
+
+            _conference = conference;
+        }
+
+        private void frmConference_Load(object sender, EventArgs e)
+        {
+            if (_conference != null)
             {
-                txtName.Text = _confrence.Name;
+                txtName.Text = _conference.Name;
             }
         }
 
@@ -45,18 +40,26 @@ namespace Meeting
         {
             if (string.IsNullOrEmpty(txtName.Text))
             {
-                MessageBox.Show(EngValidationResource.EnterConfrenceName, EngDisplayResource.ProjectCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(EngValidationResource.EnterConferenceName, EngDisplayResource.ProjectCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                //_confrence.Name = txtName.Text;
-                await new BalConference().AddConfrence(txtName.Text);
-                btnAdd.DialogResult = DialogResult.OK;
+                if (_conference != null)
+                {
+                    await balConference.UpdateConference(_conference.Id, txtName.Text);
+                }
+                else
+                {
+                    await balConference.AddConference(txtName.Text);
+                }
+
+                DialogResult = DialogResult.OK;
             }
         }
-        public Confrence Confrence
+
+        public Conference Conference
         {
-            get { return _confrence; }
+            get { return _conference; }
         }
     }
 }

@@ -11,25 +11,31 @@ namespace BalDemo
 {
     public class BalConference
     {
-        private readonly IDalConfrence _dalConfrence;
+        private readonly IDalConference _dalConference;
+
         public BalConference()
         {
-            _dalConfrence = new DalConference();
+            _dalConference = new DalConference();
         }
 
-        public async Task<List<Confrence>> Confrences()
+        public async Task<List<Conference>> ListConferences()
         {
-            return await _dalConfrence.Confrences(); 
+            return await _dalConference.ListConferences();
         }
 
-        public async Task AddConfrence(string name)
+        public async Task AddConference(string name)
         {
-            await _dalConfrence.AddConfrence(name);
+            await _dalConference.AddConference(name);
         }
 
-        public async Task<Confrence> Confrence(int id)
+        public async Task UpdateConference(int id, string name)
         {
-            return (await Confrences()).FirstOrDefault(x => x.Id == id);
+            await _dalConference.UpdateConference(id, name);
+        }
+
+        public async Task<Conference> Conference(int id)
+        {
+            return (await ListConferences()).FirstOrDefault(x => x.Id == id);
         }
     }
 }

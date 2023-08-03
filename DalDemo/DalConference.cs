@@ -1,24 +1,21 @@
 ﻿using GraphQlClient;
 using ModelDemo;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DalDemo
 {
-    public interface IDalConfrence
+    public interface IDalConference
     {
-        public Task<List<Confrence>> Confrences();
-        public Task AddConfrence(string name);
+        public Task<List<Conference>> ListConferences();
+        public Task AddConference(string name);
+        public Task UpdateConference(int id, string name);
     }
 
-    public class DalConference : IDalConfrence
+    public class DalConference : IDalConference
     {
-        public async Task AddConfrence(string name)
+        public async Task AddConference(string name)
         {
-            string query = @"mutation AddConference($input: AddConferenceCommandInput!) {
+            string query = @"
+                mutation AddConference($input: AddConferenceCommandInput!) {
                     addConference(input: $input) {
                         conference {
                             id
@@ -27,35 +24,43 @@ namespace DalDemo
                     }
                 }";
 
-            await Query.ExceuteMutaionAsync<dynamic>(query, "AddConference", new { input = new { name } });
+            await Query.ExecuteMutationAsync<dynamic>(query, "AddConference", new { input = new { name } });
         }
 
-        public async Task<List<Confrence>> Confrences()
+        public async Task<List<Conference>> ListConferences()
         {
-            string query = @"query {
-                              conferences {
-                                nodes {
-                                  id
-                                  name
-                                }
-                              }
-                            }";
+            string query = @"
+                query {
+                    conferences {
+                        nodes {
+                            id
+                            name
+                        }
+                    }
+                }";
 
-            var result = await Query.ExceuteQueryAsync<ConferencesDto>(query);
+            var result = await Query.ExecuteQueryAsync<ConferencesDto>(query);
 
             return result.conferences.nodes;
         }
 
-        // {{  "conferences": {    "nodes": [      {        "name": "Test Conf"      },      {        "name": "Test Conf 1"      }    ]  }}}
+        public async Task UpdateConference(int id, string name)
+        {
+            string query = @"
+                mutation UpdateConference($input: UpdateConferenceCommandInput!) {
+                    updateConference(input: $input) {
+                        conference {
+                            id
+                        }
+                    }
+                }";
+
+            await Query.ExecuteMutationAsync<dynamic>(query, "UpdateConference", new { input = new { id, name } });
+        }
 
         public class ConferencesDto
         {
-            public NodeDto conferences { get; set; }
-        }
-
-        public class NodeDto
-        {
-            public List<Confrence> nodes { get; set; }
+            public NodeDto<Conference> conferences { get; set; }
         }
     }
 }

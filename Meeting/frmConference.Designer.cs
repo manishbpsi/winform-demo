@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            lblConfrenceName = new Label();
+            lblConferenceName = new Label();
             txtName = new TextBox();
             btnAdd = new Button();
             errorProvider1 = new ErrorProvider(components);
             ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
-            // lblConfrenceName
+            // lblConferenceName
             // 
-            lblConfrenceName.AutoSize = true;
-            lblConfrenceName.Location = new Point(40, 40);
-            lblConfrenceName.Name = "lblConfrenceName";
-            lblConfrenceName.Size = new Size(120, 20);
-            lblConfrenceName.TabIndex = 0;
-            lblConfrenceName.Text = "Confrence Name";
+            lblConferenceName.AutoSize = true;
+            lblConferenceName.Location = new Point(40, 40);
+            lblConferenceName.Name = "lblConferenceName";
+            lblConferenceName.Size = new Size(120, 20);
+            lblConferenceName.TabIndex = 0;
+            lblConferenceName.Text = "Conference Name";
             // 
             // txtName
             // 
@@ -66,7 +66,7 @@
             // 
             errorProvider1.ContainerControl = this;
             // 
-            // frmConfrence
+            // frmConference
             // 
             AcceptButton = btnAdd;
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -74,13 +74,13 @@
             ClientSize = new Size(513, 143);
             Controls.Add(btnAdd);
             Controls.Add(txtName);
-            Controls.Add(lblConfrenceName);
+            Controls.Add(lblConferenceName);
             MaximizeBox = false;
             MinimizeBox = false;
-            Name = "frmConfrence";
+            Name = "frmConference";
             StartPosition = FormStartPosition.CenterParent;
-            Text = "Add/Edit Confrence";
-            Load += frmConfrence_Load;
+            Text = "Add/Edit Conference";
+            Load += frmConference_Load;
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -88,7 +88,7 @@
 
         #endregion
 
-        private Label lblConfrenceName;
+        private Label lblConferenceName;
         private TextBox txtName;
         private Button btnAdd;
         private ErrorProvider errorProvider1;

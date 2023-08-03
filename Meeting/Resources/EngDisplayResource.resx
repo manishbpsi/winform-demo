@@ -59,7 +59,10 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:schema id="root"
+    xmlns=""
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -118,9 +121,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AddAttende" xml:space="preserve">
-    <value>Add Attende</value>
+    <value>Add Attendee</value>
   </data>
-  <data name="AddConfrence" xml:space="preserve">
+  <data name="AddConference" xml:space="preserve">
     <value>Add Conference</value>
   </data>
   <data name="AddSpeaker" xml:space="preserve">
@@ -129,10 +132,10 @@
   <data name="AddTag" xml:space="preserve">
     <value>Add Tag</value>
   </data>
-  <data name="Attende" xml:space="preserve">
-    <value>Attende</value>
+  <data name="Attendee" xml:space="preserve">
+    <value>Attendee</value>
   </data>
-  <data name="Confrence" xml:space="preserve">
+  <data name="Conference" xml:space="preserve">
     <value>Conference</value>
   </data>
   <data name="ProjectCaption" xml:space="preserve">

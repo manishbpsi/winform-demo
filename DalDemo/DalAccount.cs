@@ -11,7 +11,8 @@ namespace DalDemo
     {
         public bool ValidateUser(User user);
     }
-    public class DalAccount: IDalAccount
+
+    public class DalAccount : IDalAccount
     {
         public bool ValidateUser(User user)
         {

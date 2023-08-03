@@ -8,10 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Meeting.Resources {
+namespace Meeting.Resources
+{
     using System;
-    
-    
+
+
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -22,121 +23,147 @@ namespace Meeting.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class EngDisplayResource {
-        
+    internal class EngDisplayResource
+    {
+
         private static global::System.Resources.ResourceManager resourceMan;
-        
+
         private static global::System.Globalization.CultureInfo resourceCulture;
-        
+
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal EngDisplayResource() {
+        internal EngDisplayResource()
+        {
         }
-        
+
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
-            get {
-                if (object.ReferenceEquals(resourceMan, null)) {
+        internal static global::System.Resources.ResourceManager ResourceManager
+        {
+            get
+            {
+                if (object.ReferenceEquals(resourceMan, null))
+                {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Meeting.Resources.EngDisplayResource", typeof(EngDisplayResource).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-        
+
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
-            get {
+        internal static global::System.Globalization.CultureInfo Culture
+        {
+            get
+            {
                 return resourceCulture;
             }
-            set {
+            set
+            {
                 resourceCulture = value;
             }
         }
-        
+
         /// <summary>
-        ///   Looks up a localized string similar to Add Attende.
+        ///   Looks up a localized string similar to Add Attendee.
         /// </summary>
-        internal static string AddAttende {
-            get {
+        internal static string AddAttendee
+        {
+            get
+            {
                 return ResourceManager.GetString("AddAttende", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Add Conference.
         /// </summary>
-        internal static string AddConfrence {
-            get {
-                return ResourceManager.GetString("AddConfrence", resourceCulture);
+        internal static string AddConference
+        {
+            get
+            {
+                return ResourceManager.GetString("AddConference", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Add Speaker.
         /// </summary>
-        internal static string AddSpeaker {
-            get {
+        internal static string AddSpeaker
+        {
+            get
+            {
                 return ResourceManager.GetString("AddSpeaker", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Add Tag.
         /// </summary>
-        internal static string AddTag {
-            get {
+        internal static string AddTag
+        {
+            get
+            {
                 return ResourceManager.GetString("AddTag", resourceCulture);
             }
         }
-        
+
         /// <summary>
-        ///   Looks up a localized string similar to Attende.
+        ///   Looks up a localized string similar to Attendee.
         /// </summary>
-        internal static string Attende {
-            get {
-                return ResourceManager.GetString("Attende", resourceCulture);
+        internal static string Attendee
+        {
+            get
+            {
+                return ResourceManager.GetString("Attendee", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Conference.
         /// </summary>
-        internal static string Confrence {
-            get {
-                return ResourceManager.GetString("Confrence", resourceCulture);
+        internal static string Conference
+        {
+            get
+            {
+                return ResourceManager.GetString("Conference", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Demo.
         /// </summary>
-        internal static string ProjectCaption {
-            get {
+        internal static string ProjectCaption
+        {
+            get
+            {
                 return ResourceManager.GetString("ProjectCaption", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Speaker.
         /// </summary>
-        internal static string Speaker {
-            get {
+        internal static string Speaker
+        {
+            get
+            {
                 return ResourceManager.GetString("Speaker", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Tag.
         /// </summary>
-        internal static string Tag {
-            get {
+        internal static string Tag
+        {
+            get
+            {
                 return ResourceManager.GetString("Tag", resourceCulture);
             }
         }

@@ -1,22 +1,15 @@
 ﻿using BalDemo;
 using Meeting.Resources;
 using ModelDemo;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Meeting
 {
     public partial class frmMain : Form
     {
-        private int _seletedItem = 0;
-        private List<Confrence> _confrences;
+        private int _selectedItem = 0;
+
+        private List<Conference> _conferences;
+
         public frmMain()
         {
             InitializeComponent();
@@ -33,27 +26,19 @@ namespace Meeting
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
 
-        }
         private async void LoadConference()
         {
-            lblSelectedItem.Text = EngDisplayResource.Confrence;
-            btnAdd.Text = EngDisplayResource.AddConfrence;
-            _seletedItem = 1;
+            lblSelectedItem.Text = EngDisplayResource.Conference;
+            btnAdd.Text = EngDisplayResource.AddConference;
+            _selectedItem = 1;
 
-            _confrences = await new BalConference().Confrences();
+            _conferences = await new BalConference().ListConferences();
 
             //dgvData.Rows.Clear();
             dgvData.DataSource = null;
@@ -77,67 +62,80 @@ namespace Meeting
             dgvData.RowsDefaultCellStyle.BackColor = Color.Bisque;
             dgvData.AlternatingRowsDefaultCellStyle.BackColor = Color.Beige;
             dgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvData.DataSource = _confrences;
+            dgvData.DataSource = _conferences;
         }
-        private void toolConfrence_Click(object sender, EventArgs e)
+
+        private void toolConference_Click(object sender, EventArgs e)
         {
             LoadConference();
         }
 
         private void toolAttendes_Click(object sender, EventArgs e)
         {
-            lblSelectedItem.Text = EngDisplayResource.Attende;
-            btnAdd.Text = EngDisplayResource.AddAttende;
-            _seletedItem = 2;
+            lblSelectedItem.Text = EngDisplayResource.Attendee;
+            btnAdd.Text = EngDisplayResource.AddAttendee;
+            _selectedItem = 2;
         }
 
         private void toolSpeakers_Click(object sender, EventArgs e)
         {
             lblSelectedItem.Text = EngDisplayResource.Speaker;
             btnAdd.Text = EngDisplayResource.AddSpeaker;
-            _seletedItem = 3;
+            _selectedItem = 3;
         }
 
         private void toolTags_Click(object sender, EventArgs e)
         {
             lblSelectedItem.Text = EngDisplayResource.Tag;
             btnAdd.Text = EngDisplayResource.AddTag;
-            _seletedItem = 4;
+            _selectedItem = 4;
         }
 
         private void dgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            var senderGrid = (DataGridView)sender;
-
-            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
+            try
             {
-                frmConference frmConfrence = new frmConference(_confrences.FirstOrDefault(x => x.Id == Convert.ToInt32(senderGrid.Rows[e.RowIndex].Cells[0].Value)));
-                if (frmConfrence.ShowDialog() == DialogResult.OK)
+                var senderGrid = (DataGridView)sender;
+
+                if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
                 {
-                    //senderGrid.Rows[e.RowIndex].Cells[1].Value = frmConfrence.Confrence.Name;
-                    dgvData.DataSource = null;
-                    dgvData.DataSource = _confrences;
+                    frmConference frmConference = new frmConference(_conferences.FirstOrDefault(x => x.Id == Convert.ToInt32(senderGrid.Rows[e.RowIndex].Cells[0].Value)));
+                    if (frmConference.ShowDialog() == DialogResult.OK)
+                    {
+                        //senderGrid.Rows[e.RowIndex].Cells[1].Value = frmConference.Conference.Name;
+                        dgvData.DataSource = null;
+                        dgvData.DataSource = _conferences;
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, EngDisplayResource.ProjectCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            switch (_seletedItem)
+            switch (_selectedItem)
             {
                 case 1:
-                    frmConference frmConfrence = new frmConference(null);
-                    if (frmConfrence.ShowDialog() == DialogResult.OK)
+                    frmConference frmConference = new frmConference();
+                    if (frmConference.ShowDialog() == DialogResult.OK)
                     {
-                        _confrences.Add(frmConfrence.Confrence);
+                        _conferences.Add(frmConference.Conference);
                         dgvData.DataSource = null;
-                        dgvData.DataSource = _confrences;
+                        dgvData.DataSource = _conferences;
                         LoadConference();
                     }
                     break;
                 default:
                     throw new NotImplementedException();
             }
+        }
+
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
