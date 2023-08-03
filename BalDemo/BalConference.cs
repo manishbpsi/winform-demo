@@ -17,14 +17,19 @@ namespace BalDemo
             _dalConfrence = new DalConference();
         }
 
-        public List<Confrence> Confrences()
+        public async Task<List<Confrence>> Confrences()
         {
-            return _dalConfrence.Confrences(); 
+            return await _dalConfrence.Confrences(); 
         }
 
-        public Confrence Confrence(int id)
+        public async Task AddConfrence(string name)
         {
-            return Confrences().FirstOrDefault(x=>x.Id==id);
+            await _dalConfrence.AddConfrence(name);
+        }
+
+        public async Task<Confrence> Confrence(int id)
+        {
+            return (await Confrences()).FirstOrDefault(x => x.Id == id);
         }
     }
 }

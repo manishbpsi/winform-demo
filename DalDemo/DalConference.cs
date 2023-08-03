@@ -1,4 +1,5 @@
-﻿using ModelDemo;
+﻿using GraphQlClient;
+using ModelDemo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,19 +10,52 @@ namespace DalDemo
 {
     public interface IDalConfrence
     {
-        public List<Confrence> Confrences();
+        public Task<List<Confrence>> Confrences();
+        public Task AddConfrence(string name);
     }
+
     public class DalConference : IDalConfrence
     {
-        public List<Confrence> Confrences()
+        public async Task AddConfrence(string name)
         {
-            List<Confrence> confrences = new List<Confrence>();
-            confrences.Add(new Confrence { Id = 1, Name = "London" });
-            confrences.Add(new Confrence { Id = 2, Name = "US" });
-            confrences.Add(new Confrence { Id = 3, Name = "Chicago" });
-            confrences.Add(new Confrence { Id = 4, Name = "Sydeny" });
+            string query = @"mutation AddConference($input: AddConferenceCommandInput!) {
+                    addConference(input: $input) {
+                        conference {
+                            id
+                            name
+                        }
+                    }
+                }";
 
-            return confrences;
+            await Query.ExceuteMutaionAsync<dynamic>(query, "AddConference", new { input = new { name } });
+        }
+
+        public async Task<List<Confrence>> Confrences()
+        {
+            string query = @"query {
+                              conferences {
+                                nodes {
+                                  id
+                                  name
+                                }
+                              }
+                            }";
+
+            var result = await Query.ExceuteQueryAsync<ConferencesDto>(query);
+
+            return result.conferences.nodes;
+        }
+
+        // {{  "conferences": {    "nodes": [      {        "name": "Test Conf"      },      {        "name": "Test Conf 1"      }    ]  }}}
+
+        public class ConferencesDto
+        {
+            public NodeDto conferences { get; set; }
+        }
+
+        public class NodeDto
+        {
+            public List<Confrence> nodes { get; set; }
         }
     }
 }

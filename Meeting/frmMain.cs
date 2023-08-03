@@ -47,13 +47,13 @@ namespace Meeting
         {
 
         }
-        private void LoadConference()
+        private async void LoadConference()
         {
             lblSelectedItem.Text = EngDisplayResource.Confrence;
             btnAdd.Text = EngDisplayResource.AddConfrence;
             _seletedItem = 1;
-            BalConference balConfrence = new BalConference();
-            _confrences = balConfrence.Confrences();
+
+            _confrences = await new BalConference().Confrences();
 
             //dgvData.Rows.Clear();
             dgvData.DataSource = null;
@@ -132,6 +132,7 @@ namespace Meeting
                         _confrences.Add(frmConfrence.Confrence);
                         dgvData.DataSource = null;
                         dgvData.DataSource = _confrences;
+                        LoadConference();
                     }
                     break;
                 default:

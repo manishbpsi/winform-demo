@@ -41,7 +41,7 @@ namespace Meeting
             }
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private async void btnAdd_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtName.Text))
             {
@@ -49,7 +49,8 @@ namespace Meeting
             }
             else
             {
-                _confrence.Name = txtName.Text;
+                //_confrence.Name = txtName.Text;
+                await new BalConference().AddConfrence(txtName.Text);
                 btnAdd.DialogResult = DialogResult.OK;
             }
         }
