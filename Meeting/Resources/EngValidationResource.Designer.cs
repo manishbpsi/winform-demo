@@ -61,7 +61,7 @@ namespace Meeting.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please enter Confrence Name.
+        ///   Looks up a localized string similar to Please enter Conference Name.
         /// </summary>
         internal static string EnterConfrenceName {
             get {

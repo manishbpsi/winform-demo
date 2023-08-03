@@ -13,11 +13,11 @@ using System.Windows.Forms;
 
 namespace Meeting
 {
-    public partial class frmConfrence : Form
+    public partial class frmConference : Form
     {
-        BalConfrence balconfrence;
+        BalConference balconfrence;
         Confrence _confrence = null;
-        public frmConfrence(Confrence confrence)
+        public frmConference(Confrence confrence)
         {
             InitializeComponent();
             //balconfrence = new BalConfrence();

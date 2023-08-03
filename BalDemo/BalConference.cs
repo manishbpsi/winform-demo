@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace BalDemo
 {
-    public class BalConfrence
+    public class BalConference
     {
         private readonly IDalConfrence _dalConfrence;
-        public BalConfrence()
+        public BalConference()
         {
-            _dalConfrence = new DalConfrence();
+            _dalConfrence = new DalConference();
         }
 
         public List<Confrence> Confrences()

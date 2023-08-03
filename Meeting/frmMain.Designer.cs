@@ -118,52 +118,52 @@
             // 
             toolConfrence.AutoSize = false;
             toolConfrence.BackColor = SystemColors.ActiveCaption;
+            toolConfrence.DisplayStyle = ToolStripItemDisplayStyle.Text;
             toolConfrence.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             toolConfrence.Image = (Image)resources.GetObject("toolConfrence.Image");
             toolConfrence.ImageTransparentColor = Color.Magenta;
             toolConfrence.Name = "toolConfrence";
             toolConfrence.Size = new Size(150, 50);
-            toolConfrence.Text = "Confrence";
-            toolConfrence.TextAlign = ContentAlignment.MiddleLeft;
+            toolConfrence.Text = "Conference";
             toolConfrence.Click += toolConfrence_Click;
             // 
             // toolAttendes
             // 
             toolAttendes.AutoSize = false;
             toolAttendes.BackColor = SystemColors.ActiveCaption;
+            toolAttendes.DisplayStyle = ToolStripItemDisplayStyle.Text;
             toolAttendes.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             toolAttendes.Image = (Image)resources.GetObject("toolAttendes.Image");
             toolAttendes.ImageTransparentColor = Color.Magenta;
             toolAttendes.Name = "toolAttendes";
             toolAttendes.Size = new Size(150, 50);
-            toolAttendes.Text = "Attendes";
-            toolAttendes.TextAlign = ContentAlignment.MiddleLeft;
+            toolAttendes.Text = "Attendees";
             toolAttendes.Click += toolAttendes_Click;
             // 
             // toolSpeakers
             // 
             toolSpeakers.AutoSize = false;
             toolSpeakers.BackColor = SystemColors.ActiveCaption;
+            toolSpeakers.DisplayStyle = ToolStripItemDisplayStyle.Text;
             toolSpeakers.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             toolSpeakers.Image = (Image)resources.GetObject("toolSpeakers.Image");
             toolSpeakers.ImageTransparentColor = Color.Magenta;
             toolSpeakers.Name = "toolSpeakers";
             toolSpeakers.Size = new Size(150, 50);
             toolSpeakers.Text = "Speakers";
-            toolSpeakers.TextAlign = ContentAlignment.MiddleLeft;
             toolSpeakers.Click += toolSpeakers_Click;
             // 
             // toolTags
             // 
             toolTags.AutoSize = false;
             toolTags.BackColor = SystemColors.ActiveCaption;
+            toolTags.DisplayStyle = ToolStripItemDisplayStyle.Text;
             toolTags.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             toolTags.Image = (Image)resources.GetObject("toolTags.Image");
             toolTags.ImageTransparentColor = Color.Magenta;
             toolTags.Name = "toolTags";
             toolTags.Size = new Size(150, 50);
             toolTags.Text = "Tags";
-            toolTags.TextAlign = ContentAlignment.MiddleLeft;
             toolTags.Click += toolTags_Click;
             // 
             // tableLayoutPanel2

@@ -1,6 +1,6 @@
 ﻿namespace Meeting
 {
-    partial class frmConfrence
+    partial class frmConference
     {
         /// <summary>
         /// Required designer variable.

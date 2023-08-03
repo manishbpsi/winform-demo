@@ -121,7 +121,7 @@
     <value>Add Attende</value>
   </data>
   <data name="AddConfrence" xml:space="preserve">
-    <value>Add Confrence</value>
+    <value>Add Conference</value>
   </data>
   <data name="AddSpeaker" xml:space="preserve">
     <value>Add Speaker</value>
@@ -133,7 +133,7 @@
     <value>Attende</value>
   </data>
   <data name="Confrence" xml:space="preserve">
-    <value>Confrence</value>
+    <value>Conference</value>
   </data>
   <data name="ProjectCaption" xml:space="preserve">
     <value>Demo</value>

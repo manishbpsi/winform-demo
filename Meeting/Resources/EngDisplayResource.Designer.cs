@@ -70,7 +70,7 @@ namespace Meeting.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Add Confrence.
+        ///   Looks up a localized string similar to Add Conference.
         /// </summary>
         internal static string AddConfrence {
             get {
@@ -106,7 +106,7 @@ namespace Meeting.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Confrence.
+        ///   Looks up a localized string similar to Conference.
         /// </summary>
         internal static string Confrence {
             get {
