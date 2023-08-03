@@ -118,61 +118,57 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AddAttendee" xml:space="preserve">
-    <value>Add Attendee</value>
+    <value>添加与会者</value>
   </data>
   <data name="AddConference" xml:space="preserve">
-    <value>Add Conference</value>
+    <value>添加会议</value>
   </data>
   <data name="AddSpeaker" xml:space="preserve">
-    <value>Add Speaker</value>
+    <value>添加发言人</value>
   </data>
   <data name="AddTag" xml:space="preserve">
-    <value>Add Tag</value>
+    <value>添加标签</value>
   </data>
   <data name="Attendee" xml:space="preserve">
-    <value>Attendee</value>
+    <value>出席者</value>
   </data>
   <data name="Conference" xml:space="preserve">
-    <value>Conference</value>
+    <value>会议</value>
   </data>
   <data name="Edit" xml:space="preserve">
-    <value>Edit</value>
-    <comment>V</comment>
+    <value>编辑</value>
   </data>
   <data name="EnterPassword" xml:space="preserve">
-    <value>Enter Password</value>
+    <value>输入密码</value>
   </data>
   <data name="EnterUserName" xml:space="preserve">
-    <value>Enter User Name</value>
+    <value>输入用户名</value>
   </data>
   <data name="File" xml:space="preserve">
-    <value>File</value>
+    <value>文件</value>
   </data>
   <data name="Id" xml:space="preserve">
-    <value>Id</value>
+    <value>ID</value>
   </data>
   <data name="Language" xml:space="preserve">
-    <value>Language</value>
+    <value>语言</value>
   </data>
   <data name="Login" xml:space="preserve">
-    <value>Login</value>
+    <value>登录</value>
   </data>
   <data name="Name" xml:space="preserve">
-    <value>Name</value>
-  </data>
-  <data name="ProjectCaption" xml:space="preserve">
-    <value>Demo</value>
+    <value>姓名</value>
   </data>
   <data name="Report" xml:space="preserve">
-    <value>Report</value>
+    <value>报告</value>
   </data>
   <data name="Speaker" xml:space="preserve">
-    <value>Speaker</value>
+    <value>扬声器</value>
   </data>
   <data name="Tag" xml:space="preserve">
-    <value>Tag</value>
+    <value>标签</value>
   </data>
   <data name="View" xml:space="preserve">
-    <value>View</value>
+    <value>看法</value>
   </data>
 </root>

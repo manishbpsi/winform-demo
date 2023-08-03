@@ -22,14 +22,14 @@ namespace Meeting.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class EngDisplayResource {
+    internal class EngDisplayResource___Copy {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal EngDisplayResource() {
+        internal EngDisplayResource___Copy() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Meeting.Resources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Meeting.Resources.EngDisplayResource", typeof(EngDisplayResource).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Meeting.Resources.EngDisplayResource - Copy", typeof(EngDisplayResource___Copy).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -63,9 +63,9 @@ namespace Meeting.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Add Attendee.
         /// </summary>
-        internal static string AddAttendee {
+        internal static string AddAttende {
             get {
-                return ResourceManager.GetString("AddAttendee", resourceCulture);
+                return ResourceManager.GetString("AddAttende", resourceCulture);
             }
         }
         
@@ -115,92 +115,11 @@ namespace Meeting.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Edit.
-        /// </summary>
-        internal static string Edit {
-            get {
-                return ResourceManager.GetString("Edit", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Enter Password.
-        /// </summary>
-        internal static string EnterPassword {
-            get {
-                return ResourceManager.GetString("EnterPassword", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Enter User Name.
-        /// </summary>
-        internal static string EnterUserName {
-            get {
-                return ResourceManager.GetString("EnterUserName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to File.
-        /// </summary>
-        internal static string File {
-            get {
-                return ResourceManager.GetString("File", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Id.
-        /// </summary>
-        internal static string Id {
-            get {
-                return ResourceManager.GetString("Id", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Language.
-        /// </summary>
-        internal static string Language {
-            get {
-                return ResourceManager.GetString("Language", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Login.
-        /// </summary>
-        internal static string Login {
-            get {
-                return ResourceManager.GetString("Login", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Name.
-        /// </summary>
-        internal static string Name {
-            get {
-                return ResourceManager.GetString("Name", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Demo.
         /// </summary>
         internal static string ProjectCaption {
             get {
                 return ResourceManager.GetString("ProjectCaption", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Report.
-        /// </summary>
-        internal static string Report {
-            get {
-                return ResourceManager.GetString("Report", resourceCulture);
             }
         }
         
@@ -219,15 +138,6 @@ namespace Meeting.Resources {
         internal static string Tag {
             get {
                 return ResourceManager.GetString("Tag", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to View.
-        /// </summary>
-        internal static string View {
-            get {
-                return ResourceManager.GetString("View", resourceCulture);
             }
         }
     }

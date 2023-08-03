@@ -5,7 +5,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
+using System.Reflection;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,7 +21,18 @@ namespace Meeting
 
         public frmLogin()
         {
+
+            //Sets the culture to French(France)
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("es-ES");
+            // Sets the UI culture to French (France)
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("es-ES");
+
+
             InitializeComponent();
+
+            lblLogin.Text = EngDisplayResource.Login;
+            lblPassword.Text = EngDisplayResource.EnterPassword;
+            lblUserName.Text = EngDisplayResource.EnterUserName;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

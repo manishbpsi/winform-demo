@@ -9,14 +9,28 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.Resources.ResourceManager" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\BalDemo\BalDemo.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Resources\EngDisplayResource.es-ES.Designer.cs">
+      <DependentUpon>EngDisplayResource.es-ES.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
     <Compile Update="Resources\EngDisplayResource.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>EngDisplayResource.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\EngValidationResource.es-ES.Designer.cs">
+      <DependentUpon>EngValidationResource.es-ES.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Update="Resources\EngValidationResource.Designer.cs">
       <DesignTime>True</DesignTime>
@@ -26,9 +40,17 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Resources\EngDisplayResource.es-ES.resx">
+      <LastGenOutput>EngDisplayResource.es-ES.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Resources\EngDisplayResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>EngDisplayResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\EngValidationResource.es-ES.resx">
+      <LastGenOutput>EngValidationResource.es-ES.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Resources\EngValidationResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>

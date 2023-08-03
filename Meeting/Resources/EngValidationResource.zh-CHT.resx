@@ -117,62 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AddAttendee" xml:space="preserve">
-    <value>Add Attendee</value>
-  </data>
-  <data name="AddConference" xml:space="preserve">
-    <value>Add Conference</value>
-  </data>
-  <data name="AddSpeaker" xml:space="preserve">
-    <value>Add Speaker</value>
-  </data>
-  <data name="AddTag" xml:space="preserve">
-    <value>Add Tag</value>
-  </data>
-  <data name="Attendee" xml:space="preserve">
-    <value>Attendee</value>
-  </data>
-  <data name="Conference" xml:space="preserve">
-    <value>Conference</value>
-  </data>
-  <data name="Edit" xml:space="preserve">
-    <value>Edit</value>
-    <comment>V</comment>
+  <data name="EnterConferenceName" xml:space="preserve">
+    <value>请输入会议名称</value>
   </data>
   <data name="EnterPassword" xml:space="preserve">
-    <value>Enter Password</value>
+    <value>请输入密码</value>
   </data>
   <data name="EnterUserName" xml:space="preserve">
-    <value>Enter User Name</value>
+    <value>请输入用户名</value>
   </data>
-  <data name="File" xml:space="preserve">
-    <value>File</value>
-  </data>
-  <data name="Id" xml:space="preserve">
-    <value>Id</value>
-  </data>
-  <data name="Language" xml:space="preserve">
-    <value>Language</value>
-  </data>
-  <data name="Login" xml:space="preserve">
-    <value>Login</value>
-  </data>
-  <data name="Name" xml:space="preserve">
-    <value>Name</value>
-  </data>
-  <data name="ProjectCaption" xml:space="preserve">
-    <value>Demo</value>
-  </data>
-  <data name="Report" xml:space="preserve">
-    <value>Report</value>
-  </data>
-  <data name="Speaker" xml:space="preserve">
-    <value>Speaker</value>
-  </data>
-  <data name="Tag" xml:space="preserve">
-    <value>Tag</value>
-  </data>
-  <data name="View" xml:space="preserve">
-    <value>View</value>
+  <data name="IncorrectLoginDetails" xml:space="preserve">
+    <value>登录信息不正确</value>
   </data>
 </root>

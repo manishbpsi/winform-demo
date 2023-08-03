@@ -1,6 +1,7 @@
 ﻿using BalDemo;
 using Meeting.Resources;
 using ModelDemo;
+using System.Globalization;
 
 namespace Meeting
 {
@@ -17,6 +18,17 @@ namespace Meeting
 
         private void frmMain_Load(object sender, EventArgs e)
         {
+            toolConference.Text = EngDisplayResource.Conference;
+            toolAttendees.Text = EngDisplayResource.Attendee;
+            toolSpeakers.Text = EngDisplayResource.Speaker;
+            toolTags.Text = EngDisplayResource.Tag;
+
+            fileToolStripMenuItem.Text = EngDisplayResource.File;
+            viewToolStripMenuItem.Text = EngDisplayResource.View;
+            editToolStripMenuItem.Text = EngDisplayResource.Edit;   
+            reportToolStripMenuItem.Text = EngDisplayResource.Report;
+            languageToolStripMenuItem.Text = EngDisplayResource.Language;
+
             this.WindowState = FormWindowState.Maximized;
             LoadConference();
         }
@@ -44,16 +56,16 @@ namespace Meeting
             dgvData.DataSource = null;
             dgvData.AutoGenerateColumns = false;
             dgvData.ColumnCount = 2;
-            dgvData.Columns[0].HeaderText = "ID";
+            dgvData.Columns[0].HeaderText = EngDisplayResource.Id;
             // dgvData.Columns[0].Width = 300;
             dgvData.Columns[0].DataPropertyName = "Id";
-            dgvData.Columns[1].HeaderText = "Name";
+            dgvData.Columns[1].HeaderText = EngDisplayResource.Name;
             dgvData.Columns[1].DataPropertyName = "Name";
             //dgvData.Columns[1].Width = 500;
 
             DataGridViewButtonColumn btnEdit = new DataGridViewButtonColumn();
-            btnEdit.Text = "Edit";
-            btnEdit.HeaderText = "Edit";
+            btnEdit.Text = EngDisplayResource.Edit;
+            btnEdit.HeaderText = EngDisplayResource.Edit;
             btnEdit.FlatStyle = FlatStyle.Standard;
             btnEdit.UseColumnTextForButtonValue = true;
             // btnEdit.Width = 300;
@@ -136,6 +148,33 @@ namespace Meeting
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void englishToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            updateLanguage(new CultureInfo("en-US"));
+        }
+
+        private void spansihToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            updateLanguage(new CultureInfo("es-ES"));
+        }
+
+        private void portugeseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            updateLanguage(new CultureInfo("zh-CHT"));
+        }
+
+
+        private void updateLanguage(CultureInfo customCulture)
+        {
+
+            Thread.CurrentThread.CurrentCulture = customCulture;
+            Thread.CurrentThread.CurrentUICulture = customCulture;
+
+            this.Controls.Clear();
+            InitializeComponent();
+            frmMain_Load(null, null);
         }
     }
 }

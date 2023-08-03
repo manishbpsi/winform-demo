@@ -44,52 +44,55 @@
             // 
             lblLogin.AutoSize = true;
             lblLogin.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            lblLogin.Location = new Point(310, 112);
+            lblLogin.Location = new Point(273, 82);
             lblLogin.Name = "lblLogin";
-            lblLogin.Size = new Size(80, 35);
+            lblLogin.Size = new Size(64, 28);
             lblLogin.TabIndex = 0;
             lblLogin.Text = "Login";
             // 
             // txtUserName
             // 
-            txtUserName.Location = new Point(310, 176);
+            txtUserName.Location = new Point(154, 155);
+            txtUserName.Margin = new Padding(3, 2, 3, 2);
             txtUserName.Name = "txtUserName";
-            txtUserName.Size = new Size(347, 27);
+            txtUserName.Size = new Size(304, 23);
             txtUserName.TabIndex = 1;
             txtUserName.Validating += txtUserName_Validating;
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(310, 235);
+            txtPassword.Location = new Point(154, 206);
+            txtPassword.Margin = new Padding(3, 2, 3, 2);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
-            txtPassword.Size = new Size(347, 27);
+            txtPassword.Size = new Size(304, 23);
             txtPassword.TabIndex = 2;
             txtPassword.Validating += txtPassword_Validating;
             // 
             // lblUserName
             // 
             lblUserName.AutoSize = true;
-            lblUserName.Location = new Point(132, 183);
+            lblUserName.Location = new Point(154, 138);
             lblUserName.Name = "lblUserName";
-            lblUserName.Size = new Size(120, 20);
+            lblUserName.Size = new Size(95, 15);
             lblUserName.TabIndex = 3;
             lblUserName.Text = "Enter User Name";
             // 
             // lblPassword
             // 
             lblPassword.AutoSize = true;
-            lblPassword.Location = new Point(132, 242);
+            lblPassword.Location = new Point(154, 189);
             lblPassword.Name = "lblPassword";
-            lblPassword.Size = new Size(108, 20);
+            lblPassword.Size = new Size(87, 15);
             lblPassword.TabIndex = 4;
             lblPassword.Text = "Enter Password";
             // 
             // btnLogin
             // 
-            btnLogin.Location = new Point(310, 290);
+            btnLogin.Location = new Point(212, 260);
+            btnLogin.Margin = new Padding(3, 2, 3, 2);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(94, 29);
+            btnLogin.Size = new Size(82, 22);
             btnLogin.TabIndex = 5;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = true;
@@ -97,9 +100,10 @@
             // 
             // btnReset
             // 
-            btnReset.Location = new Point(422, 290);
+            btnReset.Location = new Point(310, 260);
+            btnReset.Margin = new Padding(3, 2, 3, 2);
             btnReset.Name = "btnReset";
-            btnReset.Size = new Size(94, 29);
+            btnReset.Size = new Size(82, 22);
             btnReset.TabIndex = 6;
             btnReset.Text = "Reset";
             btnReset.UseVisualStyleBackColor = true;
@@ -112,9 +116,9 @@
             // frmLogin
             // 
             AcceptButton = btnLogin;
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 467);
+            ClientSize = new Size(641, 350);
             Controls.Add(btnReset);
             Controls.Add(btnLogin);
             Controls.Add(lblPassword);
@@ -122,6 +126,7 @@
             Controls.Add(txtPassword);
             Controls.Add(txtUserName);
             Controls.Add(lblLogin);
+            Margin = new Padding(3, 2, 3, 2);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "frmLogin";

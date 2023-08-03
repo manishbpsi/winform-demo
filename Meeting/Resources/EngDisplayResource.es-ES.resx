@@ -118,61 +118,57 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AddAttendee" xml:space="preserve">
-    <value>Add Attendee</value>
+    <value>Agregar Asistentes</value>
   </data>
   <data name="AddConference" xml:space="preserve">
-    <value>Add Conference</value>
+    <value>Agregar Conferencia</value>
   </data>
   <data name="AddSpeaker" xml:space="preserve">
-    <value>Add Speaker</value>
+    <value>Agregar Oradores</value>
   </data>
   <data name="AddTag" xml:space="preserve">
-    <value>Add Tag</value>
+    <value>Agregar Etiquetas</value>
   </data>
   <data name="Attendee" xml:space="preserve">
-    <value>Attendee</value>
+    <value>Asistentes</value>
   </data>
   <data name="Conference" xml:space="preserve">
-    <value>Conference</value>
+    <value>Conferencia</value>
   </data>
   <data name="Edit" xml:space="preserve">
-    <value>Edit</value>
-    <comment>V</comment>
+    <value>Editar</value>
   </data>
   <data name="EnterPassword" xml:space="preserve">
-    <value>Enter Password</value>
+    <value>Introducir la contraseña</value>
   </data>
   <data name="EnterUserName" xml:space="preserve">
-    <value>Enter User Name</value>
+    <value>Introduzca su nombre de usuario</value>
   </data>
   <data name="File" xml:space="preserve">
-    <value>File</value>
+    <value>Archivo</value>
   </data>
   <data name="Id" xml:space="preserve">
-    <value>Id</value>
+    <value>Identificación</value>
   </data>
   <data name="Language" xml:space="preserve">
-    <value>Language</value>
+    <value>Idioma</value>
   </data>
   <data name="Login" xml:space="preserve">
-    <value>Login</value>
+    <value>Acceso</value>
   </data>
   <data name="Name" xml:space="preserve">
-    <value>Name</value>
-  </data>
-  <data name="ProjectCaption" xml:space="preserve">
-    <value>Demo</value>
+    <value>Nombre</value>
   </data>
   <data name="Report" xml:space="preserve">
-    <value>Report</value>
+    <value>Informe</value>
   </data>
   <data name="Speaker" xml:space="preserve">
-    <value>Speaker</value>
+    <value>Oradores</value>
   </data>
   <data name="Tag" xml:space="preserve">
-    <value>Tag</value>
+    <value>Etiquetas</value>
   </data>
   <data name="View" xml:space="preserve">
-    <value>View</value>
+    <value>Vista</value>
   </data>
 </root>
