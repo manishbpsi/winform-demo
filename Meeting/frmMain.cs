@@ -10,6 +10,7 @@ namespace Meeting
         private int _selectedItem = 0;
 
         private List<Conference> _conferences;
+        private List<Attendee> _attendees;
 
         public frmMain()
         {
@@ -25,11 +26,11 @@ namespace Meeting
 
             fileToolStripMenuItem.Text = EngDisplayResource.File;
             viewToolStripMenuItem.Text = EngDisplayResource.View;
-            editToolStripMenuItem.Text = EngDisplayResource.Edit;   
+            editToolStripMenuItem.Text = EngDisplayResource.Edit;
             reportToolStripMenuItem.Text = EngDisplayResource.Report;
             languageToolStripMenuItem.Text = EngDisplayResource.Language;
 
-            this.WindowState = FormWindowState.Maximized;
+            //this.WindowState = FormWindowState.Maximized;
             LoadConference();
         }
 
@@ -77,6 +78,46 @@ namespace Meeting
             dgvData.DataSource = _conferences;
         }
 
+        private async void LoadAttendees()
+        {
+
+            _attendees = await new BalAttendee().ListAttendees();
+
+            //dgvData.Rows.Clear();
+            dgvData.DataSource = null;
+            dgvData.AutoGenerateColumns = false;
+            dgvData.ColumnCount = 2;
+            dgvData.Columns[0].HeaderText = EngDisplayResource.Id;
+
+            dgvData.Columns[0].DataPropertyName = "Id";
+            dgvData.Columns[1].HeaderText = EngDisplayResource.FirstName;
+            dgvData.Columns[1].DataPropertyName = "FirstName";
+
+            dgvData.Columns[0].DataPropertyName = "Id";
+            dgvData.Columns[1].HeaderText = EngDisplayResource.LastName;
+            dgvData.Columns[1].DataPropertyName = "LastName";
+
+            dgvData.Columns[0].DataPropertyName = "Id";
+            dgvData.Columns[1].HeaderText = EngDisplayResource.Email;
+            dgvData.Columns[1].DataPropertyName = "EmailAddress";
+
+            dgvData.Columns[0].DataPropertyName = "Id";
+            dgvData.Columns[1].HeaderText = EngDisplayResource.UserName;
+            dgvData.Columns[1].DataPropertyName = "UserName";
+
+            DataGridViewButtonColumn btnEdit = new DataGridViewButtonColumn();
+            btnEdit.Text = EngDisplayResource.Edit;
+            btnEdit.HeaderText = EngDisplayResource.Edit;
+            btnEdit.FlatStyle = FlatStyle.Standard;
+            btnEdit.UseColumnTextForButtonValue = true;
+            dgvData.Columns.Add(btnEdit);
+
+            dgvData.RowsDefaultCellStyle.BackColor = Color.Bisque;
+            dgvData.AlternatingRowsDefaultCellStyle.BackColor = Color.Beige;
+            dgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvData.DataSource = _attendees;
+
+        }
         private void toolConference_Click(object sender, EventArgs e)
         {
             LoadConference();
@@ -87,6 +128,7 @@ namespace Meeting
             lblSelectedItem.Text = EngDisplayResource.Attendee;
             btnAdd.Text = EngDisplayResource.AddAttendee;
             _selectedItem = 2;
+            LoadAttendees();
         }
 
         private void toolSpeakers_Click(object sender, EventArgs e)
